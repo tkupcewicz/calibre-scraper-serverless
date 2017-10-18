@@ -1,0 +1,19 @@
+service: calibre-serverless
+
+provider:
+  name: aws
+  runtime: nodejs6.10
+  timeout: 15
+  region: eu-central-1
+  environment:
+    CALIBRE_MAIL: ${file(./serverless.env.yml):dev.CALIBRE_MAIL}
+    CALIBRE_PASSWORD: ${file(./serverless.env.yml):dev.CALIBRE_PASSWORD}
+    SPREADSHEET_ID: ${file(./serverless.env.yml):dev.SPREADSHEET_ID}
+
+package:
+  include:
+    - 'key.json'
+
+functions:
+  scrape:
+    handler: handler.scrape
