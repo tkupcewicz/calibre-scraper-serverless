@@ -37,7 +37,7 @@ function exportData(){
         spreadsheetId: process.env.SPREADSHEET_ID,
         valueInputOption: 'USER_ENTERED',
         insertDataOption: 'INSERT_ROWS',
-        range: 'Sheet1',
+        range: process.env.SHEET_NAME,
         resource: {
           values: [
             timeValues

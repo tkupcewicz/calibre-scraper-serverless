@@ -12,6 +12,8 @@ mv serverless.env.yml.example serverless.env.yml
 ```
 and fill it with your credentials.
 
+Change `SHEET_NAME` in `serverless.yml` to the name of sheet data will be imported to.
+
 Go to Google Cloud Platform and create a project, then enable Google spreadsheet API.
 
 Go to Credentials, create Service account key, download it as JSON file, rename it to key.json and put into project folder.

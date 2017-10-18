@@ -9,6 +9,7 @@ provider:
     CALIBRE_MAIL: ${file(./serverless.env.yml):dev.CALIBRE_MAIL}
     CALIBRE_PASSWORD: ${file(./serverless.env.yml):dev.CALIBRE_PASSWORD}
     SPREADSHEET_ID: ${file(./serverless.env.yml):dev.SPREADSHEET_ID}
+    SHEET_NAME : 'Raw_import'
 
 package:
   include:
