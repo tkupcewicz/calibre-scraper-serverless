@@ -18,3 +18,5 @@ package:
 functions:
   scrape:
     handler: handler.scrape
+    events:
+    - schedule: cron(0 12 * * ? *)
